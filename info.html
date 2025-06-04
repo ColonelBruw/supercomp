@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.postimg.cc/DZtfyjxN/supercomp1.png">
+    <title>О нас - SUPER COMP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #db545a, #478ac9, #db545a, #478ac9);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            vertical-align: middle;
+            box-sizing: border-box;
+            background-color: #db545a;
+            height: 8vh;
+            margin: 0;
+            padding: 0 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        h1 {
+            font-size: 3.5em;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+            margin: 0;
+        }
+        h2 {
+            color: #ffcc00;
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        .tagline {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin: 10px 0 30px;
+        }
+        .section {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ff4b4b;
+            backdrop-filter: blur(3px);
+            border-image: linear-gradient(90deg, #ff4b4b, #4b6cff) 1;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+            border-bottom: 3px solid #ff4b4b;
+            border-image: linear-gradient(90deg, #ff4b4b, #4b6cff) 1;
+        }
+        .feature h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .testimonial {
+            flex: 1 1 300px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .testimonial:before {
+            content: "";
+            font-size: 60px;
+            color: #ffcc00;
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .author {
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 15px;
+            text-align: right;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff4b4b, #4b6cff);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 30px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+        }
+        footer{
+                box-sizing: border-box;
+                background-color: #333333;
+                text-align: center;
+                padding: 20px 0;
+                color: #FFFFFF;
+            }
+        .cyber-logo {
+            font-size: 2em;
+            color: #ffcc00;
+            text-shadow: 0 0 5px #ffcc00;
+            letter-spacing: 2px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #ff4b4b;
+            transition: transform 0.3s;
+            border-image: linear-gradient(90deg, #ff4b4b, #4b6cff) 1;
+        }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        img.Logo{
+            margin: auto 0;
+        }
+        a.Logo{
+            margin: auto 0;
+        }
+        .SocialMediaLinks{
+            display: inline-block;
+            box-sizing: border-box; 
+            margin: auto auto auto 20px;
+            min-width: 135px;
+        }
+        .SocialMediaLinks img{
+            width: 30px;
+            height: auto;
+            min-width: 20px;
+            margin: 0 3px;
+        }
+        header input{
+            background-color: #db545a;
+            border-color: gray;
+            width: 200px;
+            padding: 5px;
+            margin: auto 20px auto auto;
+        }
+        nav{
+            margin: auto 0;
+            text-align: center;
+            min-width: 180px;
+        }
+        nav p{
+            color: #FFFFFF;
+            display: inline-block;
+            justify-content: space-evenly;
+            margin: 0 3px;
+        }
+        @media (max-width: 775px){
+            header{
+                padding: 0 5px;
+            }
+            img.Logo{
+                margin: auto 0;
+                width: 100px;
+            }
+            a.Logo{
+                margin: auto 0;
+            }
+            .SocialMediaLinks{
+                display: inline-block;
+                box-sizing: border-box; 
+                margin: auto auto auto 5px;
+                min-width: 75px;
+            }
+            .SocialMediaLinks img{
+                width: 15px;
+                height: auto;
+                margin: 0 1px;
+            }
+            header input{
+                background-color: #db545a;
+                border-color: gray;
+                min-width: 80px;
+                padding: 2px;
+                margin: auto 5px auto auto;
+            }
+            nav{
+                font-size: 12px;
+                margin: auto 0;
+                min-width: 110px;
+            }
+            nav p{
+                color: #FFFFFF;
+                display: inline-block;
+                margin: 0 1px;
+            }
+        }
+        @media (max-width: 620px) {
+            header input{
+                margin-left: 10px;
+            }
+        }
+        /* Добавляем правило для ссылок в header */
+        header a {
+            text-decoration: none;
+        }
+        /* Добавляем отступ для контента под фиксированным header */
+        main {
+            margin-top: 8vh;
+            flex: 1;
+        }
+        h1, h2, .feature h3 {
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a class="Logo" href="main.html">
+            <img class="Logo" src="https://i.postimg.cc/0yfNdCN6/supercomp.png">
+        </a>
+        <div class="SocialMediaLinks">
+            <a href="#">
+                <img src="https://i.postimg.cc/FRfsv5Vc/telegram.png">
+            </a>
+            <a href="#">
+                <img src="https://i.postimg.cc/NFmsy6Vj/vk.png">
+            </a>
+            <a href="#">
+                <img src="https://i.postimg.cc/KcMvsbzh/youtube.png">
+            </a>
+        </div>
+        <input type="text" placeholder="Поиск">
+        <nav>
+            <a href="main.html">
+                <p>Главная</p>
+            </a>
+            <a href="catalog.html">
+                <p>Каталог</p>
+            </a>
+            <a href="info.html">
+                <p>О нас</p>
+            </a>
+            <a href="contacts.html">
+                <p>Контакты</p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="section">
+                <h2>НАША ИСТОРИЯ</h2>
+                <p>SUPER COMP начал свою работу в 2015 году как небольшой клуб для гиков и энтузиастов. Сегодня мы - крупнейшая игровая площадка в регионе с 50+ топовыми компьютерами, профессиональными турнирными зонами и комьюнити из тысяч игроков.</p>
+                <p>Наша миссия - создавать пространство, где технологии встречаются с комфортом, а страсть к играм превращается в дружбу и профессиональный рост.</p>
+            </div>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Игровая зона клуба">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Турнир по киберспорту">
+                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Командные игры на стационарных ПК">
+            </div>
+
+            <div class="section">
+                <h2>ПОЧЕМУ МЫ?</h2>
+                <div class="feature-list">
+                    <div class="feature">
+                        <h3>КИБЕРСПОРТИВНАЯ ПЛОЩАДКА</h3>
+                        <p>Регулярные турниры с призовыми фондами, стрим-зона и профессиональное оборудование для киберспортсменов.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>КОМФОРТ ПРЕВЫШЕ ВСЕГО</h3>
+                        <p>Эргономичные кресла, индивидуальное освещение, климат-контроль и звукоизоляция - мы думаем о вашем комфорте.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>КОМЬЮНИТИ</h3>
+                        <p>Еженедельные ивенты, тематические вечеринки и Discord-сообщество, где вы найдете команду для любых игр.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>ТЕХНОЛОГИИ БУДУЩЕГО</h3>
+                        <p>Первыми в регионе внедряем новинки - от VR-зон до нейроинтерфейсов для киберспорта.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>НАША КОМАНДА</h2>
+                <p>За кулисами SUPER COMP работает команда из 15 профессионалов: от техников, поддерживающих железо в идеальном состоянии, до ивент-менеджеров, которые делают каждое посещение незабываемым.</p>
+                <p>Мы все - фанаты игр и технологий, и мы знаем, что нужно настоящим геймерам.</p>
+            </div>
+
+            <div class="gallery">
+                <img src="https://avatars.mds.yandex.net/get-altay/2408158/2a00000170aeba621e2e5f99d38d04f20cbe/XXL" alt="Геймеры за игровыми станциями">
+                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="VR-зона">
+                <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Игровая периферия">
+            </div>
+            <div class="section">
+                <h2>ОТЗЫВЫ ЛЕГЕНД</h2>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <p>"После спектакля бегу сюда, чтобы наконец-то играть НЕ по сценарию. Правда, жена думает, что я на репетициях..."</p>
+                        <div class="author">Константин Хабенский</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Когда мне нужно отдохнуть от съемок, я прихожу сюда. Атмосфера заряжает лучше любого спа!"</p>
+                        <div class="author">Мила Кунис</div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Наконец-то место, где мое имя ассоциируется с головокружительными победами, а не с... ну вы поняли."</p>
+                        <div class="author">Джонни Синс</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="#" class="cta-button">ПРИСОЕДИНИТЬСЯ К КОМЬЮНИТИ</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="https://i.postimg.cc/0yfNdCN6/supercomp.png">
+        <p>© 2025 ОАО "С Ноги В Табло". Все права защищены.</p>
+    </footer>
+</body>
+</html>
