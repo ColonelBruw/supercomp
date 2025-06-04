@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://i.postimg.cc/DZtfyjxN/supercomp1.png">
+    <title>Каталог | SUPER COMP</title>
+    <style>
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-width: 500px;
+            background: linear-gradient(-45deg, #db545a, #478ac9, #db545a, #478ac9);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+        }
+
+        body {
+            margin: auto 0;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            vertical-align: middle;
+            box-sizing: border-box;
+            background-color: #db545a;
+            height: 8vh;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        img.Logo {
+            margin: auto 0;
+        }
+
+        a.Logo {
+            margin: auto 0;
+        }
+
+        .SocialMediaLinks {
+            display: inline-block;
+            box-sizing: border-box;
+            margin: auto auto auto 20px;
+            min-width: 135px;
+        }
+
+        .SocialMediaLinks img {
+            width: 30px;
+            height: auto;
+            min-width: 20px;
+            margin: 0 3px;
+        }
+
+        header input {
+            background-color: #db545a;
+            border-color: gray;
+            width: 200px;
+            padding: 5px;
+            margin: auto 20px auto auto;
+        }
+
+        nav {
+            margin: auto 0;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        nav p {
+            color: #FFFFFF;
+            display: inline-block;
+            justify-content: space-evenly;
+            margin: 0 3px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 50px;
+            color: #FFFFFF;
+            display: block;
+        }
+
+        .catalog-container {
+            box-sizing: border-box;
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .catalog-card {
+            background: rgba(30, 30, 50, 0.85);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            padding: 28px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .catalog-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+        }
+
+        .catalog-card img {
+            height: 300px;
+            width: 90%;
+            border-radius: 12px;
+            margin-bottom: 18px;
+        }
+
+        .catalog-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+            color: #ffe082;
+        }
+
+        .catalog-card p {
+            margin: 0 0 12px 0;
+            color: #e0e0e0;
+            font-size: 1em;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #db545a;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .catalog-card button {
+            background: linear-gradient(90deg, #db545a, #478ac9);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .catalog-card button:hover {
+            background: linear-gradient(90deg, #478ac9, #db545a);
+        }
+
+        footer {
+            box-sizing: border-box;
+            background-color: #333333;
+            text-align: center;
+            padding: 20px 0;
+            color: #FFFFFF;
+        }
+    </style>
+    <script>
+        function bookEquipment(equipmentName) {
+            alert(`Бронирование "${equipmentName}" прошло успешно! Мы свяжемся с вами для подтверждения.`);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a class="Logo" href="main.html">
+            <img class="Logo" src="https://i.postimg.cc/0yfNdCN6/supercomp.png">
+        </a>
+        <div class="SocialMediaLinks">
+            <a href="#">
+                <img src="https://i.postimg.cc/FRfsv5Vc/telegram.png">
+            </a>
+            <a href="#">
+                <img src="https://i.postimg.cc/NFmsy6Vj/vk.png">
+            </a>
+            <a href="#">
+                <img src="https://i.postimg.cc/KcMvsbzh/youtube.png">
+            </a>
+        </div>
+        <input type="text" placeholder="Поиск">
+        <nav>
+            <a href="main.html">
+                <p>Главная</p>
+            </a>
+            <a href="catalog.html">
+                <p>Каталог</p>
+            </a>
+            <a href="info.html">
+                <p>О нас</p>
+            </a>
+            <a href="contacts.html">
+                <p>Контакты</p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Каталог оборудования</h1>
+        <div class="catalog-container">
+            <div class="catalog-card">
+                <img src="https://digital-discount.ru/wp-content/uploads/3/c/0/3c032f842952ed29f3f9dda6fe9e0c61.jpeg" alt="ПК">
+                <h3>Игровой ПК</h3>
+                <p>Процессор: Intel i9, Видеокарта: RTX 4080, 32ГБ RAM</p>
+                <div class="price">150 ₽/час</div>
+                <button onclick="bookEquipment('Игровой ПК')">Забронировать</button>
+            </div>
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=800&q=80" alt="VR">
+                <h3>VR-зона</h3>
+                <p>Oculus Quest 2, топовые игры, отдельная комната</p>
+                <div class="price">200 ₽/час</div>
+                <button onclick="bookEquipment('VR-зона')">Забронировать</button>
+            </div>
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UFM1fGVufDB8fDB8fHww" alt="Консоль">
+                <h3>Консольная зона</h3>
+                <p>PlayStation 5, Xbox Series X, большой выбор игр</p>
+                <div class="price">120 ₽/час</div>
+                <button onclick="bookEquipment('Консольная зона')">Забронировать</button>
+            </div>
+            <div class="catalog-card">
+                <img src="https://sun9-58.userapi.com/impg/-WWEgiqZK9QhfBbbr76_0L9pBDPBoabZVPuqPQ/MBLVdrO5Uvs.jpg?size=1280x720&quality=95&sign=f1f1b55e6862de25b12ef40d751b5b42&c_uniq_tag=Y42uaCawSlwTqYuqjQtqKnxPCioiFA5hFiqQiSs6DbU&type=album" alt="Киберспорт">
+                <h3>Киберспорт зона</h3>
+                <p>Профессиональное оборудование, турнирные столы, стриминг</p>
+                <div class="price">250 ₽/час</div>
+                <button onclick="bookEquipment('Киберспорт зона')">Забронировать</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="https://i.postimg.cc/0yfNdCN6/supercomp.png">
+        <p>© 2025 ОАО "С Ноги В Табло". Все права защищены.</p>
+    </footer>
+</body>
+</html>

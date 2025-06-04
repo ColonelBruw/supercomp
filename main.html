@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="https://i.postimg.cc/DZtfyjxN/supercomp1.png">
+        <!-- <link rel="stylesheet" href="styles/main_style.css"> -->
+        <title>SuperComp - Главная</title>
+        <style>
+
+            /* Общие настройки страницы и градиент для бэкграунда */
+            html{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                justify-content: center;
+                min-width: 500px;
+                background: linear-gradient(-45deg, #db545a, #478ac9, #db545a, #478ac9);
+                background-size: 400% 400%;
+                animation: gradientBG 12s ease infinite;
+            }
+
+            body{
+                margin: auto 0;
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            @keyframes gradientBG {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            /* Хедер */
+
+            header{
+                display: flex;
+                vertical-align: middle;
+                box-sizing: border-box;
+                background-color: #db545a;
+                height: 8vh;
+                margin: 0;
+                width: 100%;
+                padding: 0 20px;
+                z-index: 1000;
+            }
+
+            img.Logo{
+                margin: auto 0;
+            }
+
+            a.Logo{
+                margin: auto 0;
+            }
+
+            .SocialMediaLinks{
+                display: inline-block;
+                box-sizing: border-box; 
+
+                margin: auto auto auto 20px;
+                min-width: 135px;
+            }
+
+            .SocialMediaLinks img{
+                width: 30px;
+                height: auto;
+                min-width: 20px;
+                margin: 0 3px;
+            }
+
+            header input{
+                background-color: #db545a;
+                border-color: gray;
+                width: 200px;
+                padding: 5px;
+                margin: auto 20px auto auto;
+            }
+
+            nav{
+                margin: auto 0;
+                text-align: center;
+                min-width: 180px;
+            }
+
+            nav p{
+                color: #FFFFFF;
+                display: inline-block;
+                justify-content: space-evenly;
+                margin: 0 3px;
+            }
+
+            /* Блок с градиентной картинкой */
+
+            .UpperDiv{
+                position: relative;
+                box-sizing: border-box;
+                background-image: url("https://i.postimg.cc/qq3fbpXb/comp1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                max-width: 1240px;
+                max-height: 500px;
+                margin: 0 auto;
+                text-align: left;
+            }
+
+            .UpperDiv::after{
+                content: "";
+                display: block;    
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;      
+                left: 0;   
+                background: transparent;
+                background-image: linear-gradient(#db545a, #478ac9);
+                opacity: 0.5;
+            }
+
+            .UpperTextBlock{
+                position: inherit;
+                color: #FFFFFF;
+                display: inline-block;
+                box-sizing: border-box;
+                height: 500px;
+                width: 500px;
+                text-align: center;
+                margin: 150px 60px;
+                z-index: 10;
+            }
+
+            h1.Title{
+                display: inline-block;
+                font-size: 50px;
+                margin: 0;
+            }
+
+            p.Subheading{
+                display: inline-block;
+                font-size: 20px;
+                margin-top: 15px;
+            }
+
+            .UpperTextBlock a{
+                color: #FFFFFF;
+                display: block;
+                width: 180px;
+                padding: 10px 15px;
+                margin: 0 auto;
+                border-radius: 20px;
+                background-image: linear-gradient(90deg, #db545a, #478ac9);
+                /* cursor: pointer; */
+                transition: transform 0.2s, box-shadow 0.2s;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            }
+
+            .UpperTextBlock a:hover{
+                transform: translateY(-8px) scale(1.03);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+            }
+
+            /* Средний блок */
+
+            .MiddleDiv{
+                max-width: 1240px;
+                margin: 0 auto;
+            }
+
+            .InfoDiv{
+                color: #FFFFFF;
+                position: absolute;
+                text-align: center;
+                display: inline-block;
+                box-sizing: border-box;
+                width: 300px;
+                border: 1px solid black;
+                border-radius: 10px;
+                margin: 10% 10%;
+                transition: all 0.3s;
+                background-image: linear-gradient(45deg, #db545a, #478ac9);
+            }
+
+            .InfoDiv:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .MiddleImg1{
+                display: inline-block;
+                background-color: aliceblue;
+                width: 50%;
+                margin: 0;
+            }
+
+            .MiddleImg2{
+                display: inline-block;
+                background-color: aliceblue;
+                width: 50%;
+                margin: 0;
+                margin-left: -5px;
+            }
+
+            /* Отзывы */
+
+            .Reviews h1{
+                color: #FFFFFF;
+                display: block;
+                text-align: center;
+                font-size: 50px;
+            }
+
+            .Reviews{
+                max-width: 1240px;
+                margin: 0 auto;
+            }
+
+            .ReviewShowcase{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .Review{
+                padding: 0 2%;
+                padding-top: 3%;
+                display: inline-block;
+                box-sizing: border-box;
+                text-align: center;
+                background-color: #FFFFFF;
+                border-radius: 20px;
+                font-size: 20px;
+                width: 29%;
+                transition: all 0.3s;
+                height: auto;
+            }
+
+            .Review:hover{
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+                /* background: rgba(255, 255, 255, 0.2); */
+            }
+
+            .CustomerName{
+                font-weight: bold;
+            }
+
+            .CustomerInfo{
+                font-style: italic;
+            }
+
+            .CustomerImage{
+                width: 70px;
+                border-radius: 100px;
+            }
+
+            /* Бронирование */
+
+            .Booking{
+                max-width: 1240px;
+                display: flex;
+                justify-content: space-evenly;
+                margin: 0 auto;
+            }
+
+            .Booking p{
+                color: #FFFFFF;
+                font-size: 40px;
+                text-align: center;
+            }
+
+            .Booking a{
+                color: #FFFFFF;
+                display: block;
+                text-align: center;
+                max-width: 180px;
+                width: 20%;
+                padding: 10px 15px;
+                margin: auto 0;
+                border-radius: 20px;
+                background-image: linear-gradient(90deg, #db545a, #478ac9);
+                transition: transform 0.2s, box-shadow 0.2s;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            }
+
+            .Booking a:hover{
+                transform: translateY(-8px) scale(1.03);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+            }
+
+            /* Футер */
+
+            footer{
+                box-sizing: border-box;
+                background-color: #333333;
+                text-align: center;
+                padding: 20px 0;
+                color: #FFFFFF;
+            }
+
+            /* Адаптивность */
+
+            @media (max-width: 775px){
+                header{
+                    padding: 0 5px;
+                }
+
+                img.Logo{
+                    margin: auto 0;
+                    width: 100px;
+                }
+
+                a.Logo{
+                    margin: auto 0;
+                }
+
+                .SocialMediaLinks{
+                    display: inline-block;
+                    box-sizing: border-box; 
+                    margin: auto auto auto 5px;
+                    min-width: 75px;
+                }
+
+                .SocialMediaLinks img{
+                    width: 15px;
+                    height: auto;
+                    margin: 0 1px;
+                }
+
+                header input{
+                    background-color: #db545a;
+                    border-color: gray;
+                    min-width: 80px;
+                    padding: 2px;
+                    margin: auto 5px auto auto;
+                }
+
+                nav{
+                    font-size: 12px;
+                    margin: auto 0;
+                    min-width: 110px;
+                }
+
+                nav p{
+                    color: #FFFFFF;
+                    display: inline-block;
+                    margin: 0 1px;
+                }
+
+                .UpperDiv{
+                    text-align: center;
+                }
+
+                .UpperTextBlock{
+                    margin: 150px 0;
+                }
+
+                .InfoDiv{
+                    margin: 5% 5%;
+                    width: 250px;
+                    font-size: 12px;
+                }
+
+                .Review{
+                    width: 80%;
+                    margin: 20px auto;
+                }
+
+                .Booking p{
+                    font-size: 30px;
+                }
+
+                .Booking a{
+                    max-width: 150px;
+                }
+            }
+            
+            @media (max-width: 620px) {
+                header input{
+                    margin-left: 10px;
+                }
+
+                h1.Title{
+                    font-size: 35px;
+                }
+
+                p.Subheading{
+                    font-size: 15px;
+                }
+
+                .InfoDiv{
+                    margin: 7% 0 0 0;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <a class="Logo" href="main.html">
+                <img class="Logo" src="https://i.postimg.cc/0yfNdCN6/supercomp.png">
+            </a>
+            <div class="SocialMediaLinks">
+                <a href="#">
+                    <img src="https://i.postimg.cc/FRfsv5Vc/telegram.png">
+                </a>
+                <a href="#">
+                    <img src="https://i.postimg.cc/NFmsy6Vj/vk.png">
+                </a>
+                <a href="#">
+                    <img src="https://i.postimg.cc/KcMvsbzh/youtube.png">
+                </a>
+            </div>
+            <input type="text" placeholder="Поиск">
+            <nav>
+                <a href="main.html">
+                    <p>Главная</p>
+                </a>
+                <a href="catalog.html">
+                    <p>Каталог</p>
+                </a>
+                <a href="info.html">
+                    <p>О нас</p>
+                </a>
+                <a href="contacts.html">
+                    <p>Контакты </p>
+                </a>
+            </nav>
+        </header>
+        <div class="UpperDiv">
+            <div class="UpperTextBlock">
+                <h1 class="Title">
+                    Компьютерный клуб SUPER COMP
+                </h1>
+                <p class="Subheading">
+                    Крутые девайсы и комфортное помещение
+                </p>
+                <a href="catalog.html">
+                    Забронировать
+                </a>
+            </div>
+        </div>
+        <div class="MiddleDiv">
+            <div class="InfoDiv">
+                <h2>У нас есть:</h2>
+                <ul>
+                    <li>Топовое железо</li>
+                    <li>Стабильный интернет</li>
+                    <li>Удобные места</li>
+                    <li>Снеки!</li>
+                </ul>
+                <p>Играйте вместе с нами!</p>
+            </div>
+            <div class="MiddleImgDiv">
+                <img class="MiddleImg1" src="https://i.postimg.cc/ZqsKXKp4/comp3.jpg">
+                <img class="MiddleImg2" src="https://i.postimg.cc/0yxQw49R/comp2.jpg">
+            </div>
+        </div>
+        <div class="Reviews">
+            <h1>Отзывы</h1>
+            <div class="ReviewShowcase">
+                <div class="Review">
+                    <p class="ReviewText">Благодаря компьютерному клубу я освоил новые навыки и нашел интересных собеседников. Спасибо за отличное место!</p>
+                    <img class="CustomerImage" src="https://i.postimg.cc/t7QK88BX/customer11.png">
+                    <p class="CustomerName">Мэтти Смит</p>
+                    <p class="CustomerInfo">Главный бухгалтер</p>
+                </div>
+                <div class="Review">
+                    <p class="ReviewText">Каждую пятницу хожу поиграть с друзьями, рекомендую.</p>
+                    <img class="CustomerImage" src="https://i.postimg.cc/KckRSL0V/customer22.jpg">
+                    <p class="CustomerName">Сара Кейн</p>
+                    <p class="CustomerInfo">Менеджер</p>
+                </div>
+                <div class="Review">
+                    <p class="ReviewText">Отличный компьютерный клуб! Здесь всегда актуальное оборудование и приятная атмосфера. Рекомендую всем!</p>
+                    <img class="CustomerImage" src="https://i.postimg.cc/2js3z6J5/customer33.png">
+                    <p class="CustomerName">Демиан Вудс</p>
+                    <p class="CustomerInfo">Студент</p>
+                </div>
+            </div>
+        </div>
+        <div class="Booking">
+            <p>Забронируйте место уже сейчас!</p>
+            <a href="catalog.html">
+                Забронировать
+            </a>
+        </div>
+        <footer>
+            <img src="https://i.postimg.cc/0yfNdCN6/supercomp.png">
+            <p>© 2025 ОАО "С Ноги В Табло". Все права защищены.</p>
+        </footer>
+    </body>
+</html>
